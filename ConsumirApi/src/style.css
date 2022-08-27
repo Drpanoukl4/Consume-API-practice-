@@ -1,0 +1,163 @@
+* {
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'PT Sans', sans-serif;
+
+}
+
+.h{
+
+font-size: 40px;
+text-align: center;
+padding-top: 20px;
+
+}
+
+.cont{
+max-width: 1300px;
+width: 90%;
+
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 40px;
+padding: 50px 0;
+margin: auto;
+
+
+
+}
+
+.cont .movie{
+
+text-align: center;
+padding-bottom: 50px;
+ 
+}
+    
+.cont .movie .title{
+    
+font-size: 46px;
+font-weight: 300;
+padding: 30px;
+justify-items: center;
+       
+}
+
+.cont .movie .poster{
+
+max-width: 200vh;
+width: 100%;
+border-radius: 10%;
+box-shadow: rgb(27, 27, 27) 2px 3px 2px;
+transition: all 1s ;
+
+
+}
+
+.cont .movie .poster:hover{
+
+    border-radius: 14%;
+    box-shadow: rgb(27, 27, 27) 4px 4px 4px;
+    padding: 3px 0;
+    cursor: pointer;
+    opacity: 0.8;
+    
+    }
+
+
+body{
+
+background-color: #e2e2e2;
+
+
+}
+
+.btn {
+	position: fixed;
+	bottom: 0;
+	background: #2b2828;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 10px;
+    padding-left:50px;
+    padding-right: 50px;
+    box-shadow: black 3px 3px 3px 3px;
+    
+}
+
+.btn button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	justify-content: space-between;
+    background: #ffffff;
+    padding: 15px 35px;
+    color: rgb(29, 29, 29);
+    font-size: 20px;
+    transition: all 0.5s ease;
+    border-radius: 35px;
+    text-shadow: rgb(37, 37, 37) 0.3px 0.3px;
+    
+   
+}
+
+.btn button:hover{
+    background: rgb(44, 68, 54);
+    color: #ffffff;
+    padding: 18px 38px;
+    border: 2px solid rgb(25, 43, 39);
+    border-radius: 30px;
+
+}
+
+.tool{
+
+visibility: hidden;
+width: 120px;
+background-color: #555;
+color: #ffffff;
+text-align: center;
+padding: 5px 0px;
+border-radius: 6px;
+
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -60px;
+
+opacity: 0;
+transition: opacity 1s ease;
+
+}
+
+.tool::after{
+
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+
+
+
+}
+
+.btn:hover .tool{
+
+visibility: visible;
+opacity: 1;
+
+}
+
+
+
+
